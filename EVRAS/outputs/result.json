@@ -1,0 +1,171 @@
+{
+  "risk_level": "HIGH",
+  "confidence": 0.909,
+  "factors": [
+    "person_at_height_indicator (p=0.54) for object_id=o1, person_conf=0.87",
+    "person_at_height_indicator (p=0.75) for object_id=o3, person_conf=0.75"
+  ],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "person",
+        "confidence": 0.8728326559066772,
+        "bbox": [
+          1256.69140625,
+          2298.599365234375,
+          2769.918701171875,
+          4132.77392578125
+        ]
+      },
+      {
+        "id": "o2",
+        "type": "person",
+        "confidence": 0.7556366324424744,
+        "bbox": [
+          2460.94140625,
+          2294.242431640625,
+          3046.5361328125,
+          4033.68212890625
+        ]
+      },
+      {
+        "id": "o3",
+        "type": "person",
+        "confidence": 0.7494810223579407,
+        "bbox": [
+          1037.3760986328125,
+          2665.48046875,
+          1648.5518798828125,
+          4232.5107421875
+        ]
+      },
+      {
+        "id": "o4",
+        "type": "person",
+        "confidence": 0.5335637927055359,
+        "bbox": [
+          0.0,
+          2878.905029296875,
+          234.05406188964844,
+          3835.02294921875
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "from_id": "o1",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 99.73681640625,
+        "prob": 0.6010527359707891
+      },
+      {
+        "from_id": "o2",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 198.82861328125,
+        "prob": 0.20468555005625777
+      },
+      {
+        "from_id": "o3",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o4",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 397.48779296875,
+        "prob": 0.0
+      }
+    ],
+    "risk_factors": [
+      {
+        "name": "person_at_height_indicator",
+        "triggered": true,
+        "probability": 0.5420291658788247,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.87",
+          "floor_distance_px=99.7",
+          "floor_score=0.60",
+          "risk_probability=0.54"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.18471633638856255,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.76",
+          "floor_distance_px=198.8",
+          "floor_score=0.20",
+          "risk_probability=0.18"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": true,
+        "probability": 0.7494810223579407,
+        "evidence": [
+          "object_id=o3",
+          "person_conf=0.75",
+          "floor_distance_px=0.0",
+          "floor_score=1.00",
+          "risk_probability=0.75"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.026678189635276794,
+        "evidence": [
+          "object_id=o4",
+          "person_conf=0.53",
+          "floor_distance_px=397.5",
+          "floor_score=0.00",
+          "risk_probability=0.03"
+        ]
+      }
+    ]
+  },
+  "math_transparency": {
+    "method": "Noisy-OR",
+    "scene_floor_y": 4232.5107421875,
+    "per_factor_probs": [
+      0.542,
+      0.185,
+      0.749,
+      0.027
+    ],
+    "final_score": 0.909
+  },
+  "llm_explanation": {
+    "risk_level": "HIGH",
+    "confidence": 0.909,
+    "factors": [
+      "person_at_height_indicator (p=0.54) for object_id=o1, person_conf=0.87",
+      "person_at_height_indicator (p=0.75) for object_id=o3, person_conf=0.75"
+    ],
+    "math_transparency": {
+      "formula": "P = 1 - \u03a0(1 - p_i)",
+      "factor_probs": [
+        0.542,
+        0.185,
+        0.749,
+        0.027
+      ],
+      "final_score": 0.909,
+      "calculation_steps": [
+        "Step 1: Calculate the probability of each factor",
+        "P = 1 - (1 - 0.542)(1 - 0.185)(1 - 0.749)(1 - 0.027)",
+        "P = 1 - (0.458)(0.815)(0.251)(0.973) = 1 - (...) = 0.909"
+      ]
+    },
+    "justification": "The confidence level is above the threshold of 0.7, indicating a HIGH risk level."
+  }
+}
