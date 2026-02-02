@@ -24,41 +24,41 @@ def _extract_json(text: str) -> dict:
 
 
 def explain_risk_with_ollama(risk_output: dict, model: str = "llama3.1:8b") -> dict:
+    """
+    LLM must NOT recompute math.
+    It only explains the already computed risk score.
+    """
+
+    compact_input = {
+        "risk_level": risk_output.get("risk_level"),
+        "confidence": risk_output.get("confidence"),
+        "top_factors": risk_output.get("factors", []),
+        "math_transparency": risk_output.get("math_transparency", {})
+    }
+
     user_prompt = f"""
-You will be given a structured JSON from EVRAS.
+You will be given EVRAS output JSON.
 
 Return ONLY valid JSON.
-Do not include markdown.
-Do not include any extra text.
+No markdown. No extra text.
 
 Required output JSON schema:
 {{
   "risk_level": "LOW|MEDIUM|HIGH",
   "confidence": 0.0,
   "factors": ["..."],
-  "math_transparency": {{
-    "formula": "P = 1 - Π(1 - p_i)",
-    "factor_probs": [0.0],
-    "final_score": 0.0,
-    "calculation_steps": ["..."]
-  }},
   "justification": "..."
 }}
 
-Math transparency rules:
-- Use: P = 1 - Π(1 - p_i)
-- Show numeric substitution like:
-  P = 1 - (1 - 0.54)(1 - 0.75) = 1 - (...) = 0.909
-- The final_score must match the computation.
-Use the exact probabilities from input JSON math_transparency.per_factor_probs without rounding.
-
-Risk level thresholds (MUST follow exactly):
-- LOW    if confidence < 0.35
-- MEDIUM if 0.35 <= confidence < 0.70
-- HIGH   if confidence >= 0.70
+Rules:
+- Use ONLY the provided evidence.
+- DO NOT recompute confidence.
+- DO NOT output math_transparency.
+- risk_level must match the given risk_level.
+- factors should be short and based on top_factors.
 
 INPUT JSON:
-{json.dumps(risk_output, indent=2)}
+{json.dumps(compact_input, indent=2)}
 """
 
     payload = {
@@ -68,9 +68,7 @@ INPUT JSON:
             {"role": "user", "content": user_prompt.strip()}
         ],
         "stream": False,
-        "options": {
-            "temperature": 0
-        }
+        "options": {"temperature": 0}
     }
 
     r = requests.post("http://localhost:11434/api/chat", json=payload, timeout=300)

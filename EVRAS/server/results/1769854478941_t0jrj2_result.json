@@ -1,0 +1,82 @@
+{
+  "risk_level": "LOW",
+  "confidence": 0.0,
+  "ppe_compliance": {
+    "helmet": null,
+    "mask": null,
+    "vest": null,
+    "score": null,
+    "note": "No valid person detected (PERSON_MIN_CONF_RAW=0.35)"
+  },
+  "ppe_per_person": [],
+  "factors": [],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "vehicle",
+        "confidence": 0.9967568516731262,
+        "bbox": [
+          59.939537048339844,
+          188.9581298828125,
+          286.2699890136719,
+          290.3035583496094
+        ]
+      },
+      {
+        "id": "o2",
+        "type": "vehicle",
+        "confidence": 0.7521299123764038,
+        "bbox": [
+          18.169822692871094,
+          159.31719970703125,
+          290.682373046875,
+          290.1437072753906
+        ]
+      },
+      {
+        "id": "o3",
+        "type": "vehicle",
+        "confidence": 0.6388722062110901,
+        "bbox": [
+          27.473773956298828,
+          230.72525024414062,
+          112.59431457519531,
+          289.45867919921875
+        ]
+      },
+      {
+        "id": "o4",
+        "type": "vehicle",
+        "confidence": 0.568656861782074,
+        "bbox": [
+          23.8140869140625,
+          186.71539306640625,
+          246.20315551757812,
+          290.048828125
+        ]
+      }
+    ],
+    "relations": [],
+    "risk_factors": []
+  },
+  "math_transparency": {
+    "method": "Noisy-OR",
+    "scene_floor_y": 320.0,
+    "formula": "P = 1 - \u00ce\u00a0(1 - p_i)",
+    "factor_probs": [],
+    "one_minus_terms": [],
+    "product": 1.0,
+    "final_score": 0.0,
+    "calculation_steps": [
+      "No factors available, so \u00ce\u00a0(1 - p_i) = 1.0",
+      "Final P = 1 - 1.0 = 0.0"
+    ]
+  },
+  "llm_explanation": {
+    "risk_level": "LOW",
+    "confidence": 0.0,
+    "factors": [],
+    "justification": "No factors available, so \u00ce\u00a0(1 - p_i) = 1.0"
+  }
+}

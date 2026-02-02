@@ -1,0 +1,44 @@
+{
+  "risk_level": "LOW",
+  "confidence": 0.0,
+  "ppe_compliance": {
+    "helmet": null,
+    "mask": null,
+    "vest": null,
+    "score": null,
+    "note": "No valid person detected (PERSON_MIN_CONF_RAW=0.15)"
+  },
+  "ppe_per_person": [],
+  "factors": [],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "book",
+        "confidence": 0.5301424264907837,
+        "bbox": [
+          249.26519775390625,
+          1.4658203125,
+          639.8052368164062,
+          542.5528564453125
+        ]
+      }
+    ],
+    "relations": [],
+    "risk_factors": []
+  },
+  "math_transparency": {
+    "method": "Noisy-OR",
+    "scene_floor_y": 320.0,
+    "formula": "P = 1 - \u00ce\u00a0(1 - p_i)",
+    "factor_probs": [],
+    "one_minus_terms": [],
+    "product": 1.0,
+    "final_score": 0.0,
+    "calculation_steps": [
+      "No factors available, so \u00ce\u00a0(1 - p_i) = 1.0",
+      "Final P = 1 - 1.0 = 0.0"
+    ]
+  },
+  "llm_explanation_error": "500 Server Error: Internal Server Error for url: http://localhost:11434/api/chat"
+}

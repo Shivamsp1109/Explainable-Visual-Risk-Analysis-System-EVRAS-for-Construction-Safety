@@ -1,0 +1,190 @@
+{
+  "risk_level": "HIGH",
+  "confidence": 0.848,
+  "ppe_compliance": {
+    "helmet": false,
+    "mask": false,
+    "vest": false,
+    "score": 0.0
+  },
+  "ppe_per_person": [
+    {
+      "person_id": "o2",
+      "helmet": false,
+      "vest": false,
+      "mask": false,
+      "score": 0.0,
+      "helmet_overlap": 0.0,
+      "vest_overlap": 0.0,
+      "mask_overlap": 0.0
+    }
+  ],
+  "factors": [
+    "person_no_helmet_indicator (p=0.47) for object_id=o2, person_conf=0.47",
+    "person_no_vest_indicator (p=0.47) for object_id=o2, person_conf=0.47",
+    "person_no_mask_indicator (p=0.47) for object_id=o2, person_conf=0.47",
+    "person_at_height_indicator (p=0.03) for object_id=o2, person_conf=0.57",
+    "person_height_no_helmet_indicator (p=0.01) for object_id=o2, p_height=0.028"
+  ],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "machinery",
+        "confidence": 0.6639121770858765,
+        "bbox": [
+          215.4156036376953,
+          23.240432739257812,
+          259.4470520019531,
+          114.4359359741211
+        ]
+      },
+      {
+        "id": "o2",
+        "type": "person",
+        "confidence": 0.4666736423969269,
+        "bbox": [
+          42.85934066772461,
+          175.94039916992188,
+          60.96352005004883,
+          237.93167114257812
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "from_id": "o2",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 0.0,
+        "prob": 0.0
+      },
+      {
+        "from_id": "o2",
+        "to_id": "helmet_missing",
+        "relation": "helmet_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o2",
+        "to_id": "vest_missing",
+        "relation": "vest_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o2",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o2",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 0.013222582637385374,
+        "prob": 0.013222582637385374
+      }
+    ],
+    "risk_factors": [
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.028333682119846344,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.57",
+          "floor_distance_px=0.0",
+          "floor_score=0.00",
+          "risk_probability=0.03",
+          "person_conf_used=0.57"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": true,
+        "probability": 0.4666736423969269,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.47",
+          "best_helmet_overlap=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.47",
+          "note=PPE uses original person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": true,
+        "probability": 0.4666736423969269,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.47",
+          "best_vest_overlap=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.47",
+          "note=PPE uses original person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.4666736423969269,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.47",
+          "best_mask_overlap=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.47",
+          "note=PPE uses original person_conf"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 0.013222582637385374,
+        "evidence": [
+          "object_id=o2",
+          "p_height=0.028",
+          "p_no_helmet=0.467",
+          "combined_probability=0.013"
+        ]
+      }
+    ]
+  },
+  "math_transparency": {
+    "method": "Noisy-OR",
+    "scene_floor_y": 237.93167114257812,
+    "formula": "P = 1 - \u00ce\u00a0(1 - p_i)",
+    "factor_probs": [
+      0.467,
+      0.467,
+      0.467
+    ],
+    "one_minus_terms": [
+      0.533326,
+      0.533326,
+      0.533326
+    ],
+    "product": 0.151697,
+    "final_score": 0.848,
+    "calculation_steps": [
+      "P = 1 - (1-0.467) * (1-0.467) * (1-0.467)",
+      "1 - p_i terms = 0.533326 * 0.533326 * 0.533326",
+      "Product \u00ce\u00a0(1-p_i) = 0.151697",
+      "Final P = 1 - 0.151697 = 0.848"
+    ]
+  },
+  "llm_explanation": {
+    "risk_level": "HIGH",
+    "confidence": 0.848,
+    "factors": [
+      "person_no_helmet_indicator",
+      "person_no_vest_indicator",
+      "person_no_mask_indicator"
+    ],
+    "justification": "The risk level is HIGH due to the high confidence score of 0.848, which indicates a significant likelihood of a visual risk indicator."
+  }
+}

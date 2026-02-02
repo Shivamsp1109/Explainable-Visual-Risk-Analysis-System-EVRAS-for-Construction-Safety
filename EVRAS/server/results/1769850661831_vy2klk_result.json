@@ -1,0 +1,181 @@
+{
+  "risk_level": "HIGH",
+  "confidence": 0.998,
+  "ppe_compliance": {
+    "helmet": false,
+    "mask": false,
+    "vest": false,
+    "score": 0.0
+  },
+  "ppe_per_person": [
+    {
+      "person_id": "o1",
+      "helmet": false,
+      "vest": false,
+      "mask": false,
+      "score": 0.0,
+      "helmet_overlap": 0.0,
+      "vest_overlap": 0.0,
+      "mask_overlap": 0.0
+    }
+  ],
+  "factors": [
+    "person_no_helmet_indicator (p=0.88) for object_id=o1, person_conf=0.88",
+    "person_no_vest_indicator (p=0.88) for object_id=o1, person_conf=0.88",
+    "person_no_mask_indicator (p=0.88) for object_id=o1, person_conf=0.88",
+    "person_at_height_indicator (p=0.05) for object_id=o1, person_conf=0.98",
+    "person_height_no_helmet_indicator (p=0.04) for object_id=o1, p_height=0.049"
+  ],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "person",
+        "confidence": 0.880410373210907,
+        "bbox": [
+          144.68826293945312,
+          88.840576171875,
+          318.5027770996094,
+          632.2220458984375
+        ]
+      },
+      {
+        "id": "o2",
+        "type": "potted plant",
+        "confidence": 0.4579649567604065,
+        "bbox": [
+          577.1963500976562,
+          151.7562255859375,
+          639.8530883789062,
+          322.0467224121094
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "from_id": "o1",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 0.0,
+        "prob": 0.0
+      },
+      {
+        "from_id": "o1",
+        "to_id": "helmet_missing",
+        "relation": "helmet_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o1",
+        "to_id": "vest_missing",
+        "relation": "vest_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o1",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o1",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 0.043158173128922964,
+        "prob": 0.043158173128922964
+      }
+    ],
+    "risk_factors": [
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.049020518660545354,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.98",
+          "floor_distance_px=0.0",
+          "floor_score=0.00",
+          "risk_probability=0.05",
+          "person_conf_used=0.98"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": true,
+        "probability": 0.880410373210907,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.88",
+          "best_helmet_overlap=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.88",
+          "note=PPE uses original person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": true,
+        "probability": 0.880410373210907,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.88",
+          "best_vest_overlap=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.88",
+          "note=PPE uses original person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.880410373210907,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.88",
+          "best_mask_overlap=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.88",
+          "note=PPE uses original person_conf"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 0.043158173128922964,
+        "evidence": [
+          "object_id=o1",
+          "p_height=0.049",
+          "p_no_helmet=0.880",
+          "combined_probability=0.043"
+        ]
+      }
+    ]
+  },
+  "math_transparency": {
+    "method": "Noisy-OR",
+    "scene_floor_y": 632.2220458984375,
+    "formula": "P = 1 - \u00ce\u00a0(1 - p_i)",
+    "factor_probs": [
+      0.88,
+      0.88,
+      0.88
+    ],
+    "one_minus_terms": [
+      0.11959,
+      0.11959,
+      0.11959
+    ],
+    "product": 0.00171,
+    "final_score": 0.998,
+    "calculation_steps": [
+      "P = 1 - (1-0.88) * (1-0.88) * (1-0.88)",
+      "1 - p_i terms = 0.11959 * 0.11959 * 0.11959",
+      "Product \u00ce\u00a0(1-p_i) = 0.00171",
+      "Final P = 1 - 0.00171 = 0.998"
+    ]
+  },
+  "llm_explanation_error": "500 Server Error: Internal Server Error for url: http://localhost:11434/api/chat"
+}

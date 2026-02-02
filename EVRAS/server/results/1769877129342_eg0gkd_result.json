@@ -1,0 +1,87 @@
+{
+  "risk_level": "LOW",
+  "confidence": 0.0,
+  "ppe_compliance": {
+    "helmet": null,
+    "mask": null,
+    "vest": null,
+    "score": null,
+    "note": "No valid person detected (PERSON_MIN_CONF_RAW=0.35)"
+  },
+  "ppe_per_person": [],
+  "factors": [],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "machinery",
+        "confidence": 0.8865005373954773,
+        "bbox": [
+          223.44827270507812,
+          175.15957641601562,
+          279.80609130859375,
+          259.8114318847656
+        ]
+      },
+      {
+        "id": "o2",
+        "type": "vehicle",
+        "confidence": 0.872129499912262,
+        "bbox": [
+          214.8193359375,
+          9.153472900390625,
+          256.8917541503906,
+          111.56825256347656
+        ]
+      },
+      {
+        "id": "o3",
+        "type": "safety_vest",
+        "confidence": 0.7744123339653015,
+        "bbox": [
+          47.161781311035156,
+          190.92498779296875,
+          55.5565185546875,
+          210.87542724609375
+        ]
+      },
+      {
+        "id": "o4",
+        "type": "safety_vest",
+        "confidence": 0.6843653917312622,
+        "bbox": [
+          93.94746398925781,
+          149.30340576171875,
+          100.06819152832031,
+          165.72189331054688
+        ]
+      },
+      {
+        "id": "o5",
+        "type": "safety_vest",
+        "confidence": 0.4593384563922882,
+        "bbox": [
+          60.971885681152344,
+          188.90994262695312,
+          66.68411254882812,
+          200.01010131835938
+        ]
+      }
+    ],
+    "relations": [],
+    "risk_factors": []
+  },
+  "math_transparency": {
+    "method": "Max-Per-Person",
+    "scene_floor_y": 320.0,
+    "floor_reliable": false,
+    "per_person_scores": {},
+    "scene_score": 0.0
+  },
+  "llm_explanation": {
+    "risk_level": "LOW",
+    "confidence": 0.0,
+    "factors": [],
+    "justification": ""
+  }
+}

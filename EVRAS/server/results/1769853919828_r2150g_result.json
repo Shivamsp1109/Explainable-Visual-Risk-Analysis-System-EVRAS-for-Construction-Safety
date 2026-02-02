@@ -1,0 +1,60 @@
+{
+  "risk_level": "LOW",
+  "confidence": 0.0,
+  "ppe_compliance": {
+    "helmet": null,
+    "mask": null,
+    "vest": null,
+    "score": null,
+    "note": "No valid person detected (PERSON_MIN_CONF_RAW=0.15)"
+  },
+  "ppe_per_person": [],
+  "factors": [],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "machinery",
+        "confidence": 0.9685909748077393,
+        "bbox": [
+          8.937768936157227,
+          75.29889678955078,
+          320.0,
+          313.6793212890625
+        ]
+      },
+      {
+        "id": "o2",
+        "type": "machinery",
+        "confidence": 0.8571565747261047,
+        "bbox": [
+          33.03335952758789,
+          42.29198455810547,
+          319.7074890136719,
+          280.65338134765625
+        ]
+      }
+    ],
+    "relations": [],
+    "risk_factors": []
+  },
+  "math_transparency": {
+    "method": "Noisy-OR",
+    "scene_floor_y": 320.0,
+    "formula": "P = 1 - \u00ce\u00a0(1 - p_i)",
+    "factor_probs": [],
+    "one_minus_terms": [],
+    "product": 1.0,
+    "final_score": 0.0,
+    "calculation_steps": [
+      "No factors available, so \u00ce\u00a0(1 - p_i) = 1.0",
+      "Final P = 1 - 1.0 = 0.0"
+    ]
+  },
+  "llm_explanation": {
+    "risk_level": "LOW",
+    "confidence": 0.0,
+    "factors": [],
+    "justification": "No factors available, so \u00ce\u00a0(1 - p_i) = 1.0"
+  }
+}

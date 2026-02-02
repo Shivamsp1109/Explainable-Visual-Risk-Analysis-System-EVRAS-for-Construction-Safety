@@ -1,0 +1,1097 @@
+{
+  "risk_level": "HIGH",
+  "confidence": 0.989,
+  "ppe_compliance": {
+    "helmet": false,
+    "mask": false,
+    "vest": false,
+    "score": 0.278
+  },
+  "ppe_per_person": [
+    {
+      "person_id": "o1",
+      "helmet": true,
+      "vest": false,
+      "mask": false,
+      "score": 0.333,
+      "helmet_overlap": 1.0,
+      "helmet_conf": 0.909,
+      "vest_overlap": 0.0,
+      "vest_conf": 0.0,
+      "mask_overlap": 0.0,
+      "mask_conf": 0.0
+    },
+    {
+      "person_id": "o2",
+      "helmet": true,
+      "vest": false,
+      "mask": false,
+      "score": 0.333,
+      "helmet_overlap": 1.0,
+      "helmet_conf": 0.81,
+      "vest_overlap": 0.0,
+      "vest_conf": 0.0,
+      "mask_overlap": 0.0,
+      "mask_conf": 0.0
+    },
+    {
+      "person_id": "o3",
+      "helmet": true,
+      "vest": true,
+      "mask": false,
+      "score": 0.667,
+      "helmet_overlap": 1.0,
+      "helmet_conf": 0.863,
+      "vest_overlap": 0.585,
+      "vest_conf": 0.842,
+      "mask_overlap": 0.0,
+      "mask_conf": 0.0
+    },
+    {
+      "person_id": "o4",
+      "helmet": true,
+      "vest": false,
+      "mask": false,
+      "score": 0.333,
+      "helmet_overlap": 1.0,
+      "helmet_conf": 0.897,
+      "vest_overlap": 0.0,
+      "vest_conf": 0.0,
+      "mask_overlap": 0.0,
+      "mask_conf": 0.0
+    },
+    {
+      "person_id": "o5",
+      "helmet": false,
+      "vest": false,
+      "mask": false,
+      "score": 0.0,
+      "helmet_overlap": 0.0,
+      "helmet_conf": 0.0,
+      "vest_overlap": 0.0,
+      "vest_conf": 0.0,
+      "mask_overlap": 0.0,
+      "mask_conf": 0.0
+    },
+    {
+      "person_id": "o6",
+      "helmet": false,
+      "vest": false,
+      "mask": false,
+      "score": 0.0,
+      "helmet_overlap": 0.0,
+      "helmet_conf": 0.0,
+      "vest_overlap": 0.0,
+      "vest_conf": 0.0,
+      "mask_overlap": 0.0,
+      "mask_conf": 0.0
+    }
+  ],
+  "factors": [
+    "person_at_height_indicator (p=0.91) for object_id=o5, person_conf=0.91",
+    "person_person_proximity_indicator (p=0.73) for pair=o1-o4, dist_norm=1.00",
+    "person_person_proximity_indicator (p=0.66) for pair=o3-o6, dist_norm=1.18",
+    "person_person_proximity_indicator (p=0.62) for pair=o2-o4, dist_norm=1.65",
+    "person_person_proximity_indicator (p=0.59) for pair=o1-o2, dist_norm=2.03"
+  ],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "person",
+        "confidence": 0.9119775295257568,
+        "bbox": [
+          2.3466339111328125,
+          108.41825103759766,
+          94.24882507324219,
+          319.8129577636719
+        ]
+      },
+      {
+        "id": "o2",
+        "type": "person",
+        "confidence": 0.8659199476242065,
+        "bbox": [
+          141.60743713378906,
+          217.36256408691406,
+          159.27256774902344,
+          299.422607421875
+        ]
+      },
+      {
+        "id": "o3",
+        "type": "person",
+        "confidence": 0.8475052118301392,
+        "bbox": [
+          225.5101318359375,
+          199.86050415039062,
+          246.65716552734375,
+          315.3172912597656
+        ]
+      },
+      {
+        "id": "o4",
+        "type": "person",
+        "confidence": 0.8324227333068848,
+        "bbox": [
+          92.76252746582031,
+          137.79641723632812,
+          132.9326934814453,
+          320.0
+        ]
+      },
+      {
+        "id": "o5",
+        "type": "person",
+        "confidence": 0.8104631304740906,
+        "bbox": [
+          141.39645385742188,
+          114.21943664550781,
+          150.61465454101562,
+          150.97325134277344
+        ]
+      },
+      {
+        "id": "o6",
+        "type": "person",
+        "confidence": 0.8033431768417358,
+        "bbox": [
+          250.39898681640625,
+          216.10336303710938,
+          270.85101318359375,
+          298.1971130371094
+        ]
+      },
+      {
+        "id": "o7",
+        "type": "helmet",
+        "confidence": 0.9092850089073181,
+        "bbox": [
+          37.103477478027344,
+          109.1585693359375,
+          66.89958953857422,
+          145.799560546875
+        ]
+      },
+      {
+        "id": "o8",
+        "type": "helmet",
+        "confidence": 0.8969321250915527,
+        "bbox": [
+          104.23153686523438,
+          137.8982696533203,
+          122.41445922851562,
+          159.33067321777344
+        ]
+      },
+      {
+        "id": "o9",
+        "type": "helmet",
+        "confidence": 0.8634788393974304,
+        "bbox": [
+          229.74771118164062,
+          200.02206420898438,
+          240.70938110351562,
+          211.29299926757812
+        ]
+      },
+      {
+        "id": "o10",
+        "type": "safety_vest",
+        "confidence": 0.8423725962638855,
+        "bbox": [
+          228.1259765625,
+          216.76882934570312,
+          245.9295654296875,
+          259.4508056640625
+        ]
+      },
+      {
+        "id": "o11",
+        "type": "helmet",
+        "confidence": 0.8096108436584473,
+        "bbox": [
+          143.50625610351562,
+          217.53787231445312,
+          150.619384765625,
+          226.96929931640625
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "from_id": "o1",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 0.187042236328125,
+        "prob": 0.0007481689423198243
+      },
+      {
+        "from_id": "o2",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 20.577392578125,
+        "prob": 0.08230956998326172
+      },
+      {
+        "from_id": "o3",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 4.682708740234375,
+        "prob": 0.01873083488601416
+      },
+      {
+        "from_id": "o4",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 0.0,
+        "prob": 0.0
+      },
+      {
+        "from_id": "o5",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 169.02674865722656,
+        "prob": 0.6761069919244783
+      },
+      {
+        "from_id": "o6",
+        "to_id": "scene_floor_estimate",
+        "relation": "distance_to_floor_line_px",
+        "value": 21.802886962890625,
+        "prob": 0.08721154750271631
+      },
+      {
+        "from_id": "o1",
+        "to_id": "o2",
+        "relation": "person_person_distance_norm",
+        "value": 2.032103611030677,
+        "prob": 0.5878761318071852
+      },
+      {
+        "from_id": "o1",
+        "to_id": "o3",
+        "relation": "person_person_distance_norm",
+        "value": 3.4100610035673644,
+        "prob": 0.37974616378152043
+      },
+      {
+        "from_id": "o1",
+        "to_id": "o4",
+        "relation": "person_person_distance_norm",
+        "value": 1.0027978390624714,
+        "prob": 0.7264267545428352
+      },
+      {
+        "from_id": "o1",
+        "to_id": "o5",
+        "relation": "person_person_distance_norm",
+        "value": 2.5167744702896466,
+        "prob": 0.4999708335684677
+      },
+      {
+        "from_id": "o1",
+        "to_id": "o6",
+        "relation": "person_person_distance_norm",
+        "value": 3.856455558229824,
+        "prob": 0.3064056057080688
+      },
+      {
+        "from_id": "o2",
+        "to_id": "o3",
+        "relation": "person_person_distance_norm",
+        "value": 4.41343164595291,
+        "prob": 0.2265389496138012
+      },
+      {
+        "from_id": "o2",
+        "to_id": "o4",
+        "relation": "person_person_distance_norm",
+        "value": 1.6523425496605195,
+        "prob": 0.6153177231405684
+      },
+      {
+        "from_id": "o2",
+        "to_id": "o6",
+        "relation": "person_person_distance_norm",
+        "value": 5.781753407737206,
+        "prob": 0.030359383087416193
+      },
+      {
+        "from_id": "o3",
+        "to_id": "o4",
+        "relation": "person_person_distance_norm",
+        "value": 4.127120055235257,
+        "prob": 0.26219204272006974
+      },
+      {
+        "from_id": "o3",
+        "to_id": "o6",
+        "relation": "person_person_distance_norm",
+        "value": 1.1800877875449287,
+        "prob": 0.6630787195135247
+      },
+      {
+        "from_id": "o4",
+        "to_id": "o5",
+        "relation": "person_person_distance_norm",
+        "value": 4.124468138040477,
+        "prob": 0.2567738260351936
+      },
+      {
+        "from_id": "o4",
+        "to_id": "o6",
+        "relation": "person_person_distance_norm",
+        "value": 4.963652896614126,
+        "prob": 0.14126855133572405
+      },
+      {
+        "from_id": "o1",
+        "to_id": "o7",
+        "relation": "helmet_overlap_score",
+        "value": 0.9999999990840469,
+        "prob": 9.159530911517777e-10
+      },
+      {
+        "from_id": "o1",
+        "to_id": "vest_missing",
+        "relation": "vest_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o1",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o2",
+        "to_id": "o11",
+        "relation": "helmet_overlap_score",
+        "value": 0.9999999850939724,
+        "prob": 1.4906027634431496e-08
+      },
+      {
+        "from_id": "o2",
+        "to_id": "vest_missing",
+        "relation": "vest_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o2",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o3",
+        "to_id": "o9",
+        "relation": "helmet_overlap_score",
+        "value": 0.9999999919059976,
+        "prob": 8.09400235723956e-09
+      },
+      {
+        "from_id": "o3",
+        "to_id": "o10",
+        "relation": "vest_overlap_score",
+        "value": 0.584632378826563,
+        "prob": 0.41536762117343695
+      },
+      {
+        "from_id": "o3",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o4",
+        "to_id": "o8",
+        "relation": "helmet_overlap_score",
+        "value": 0.9999999974339481,
+        "prob": 2.566051926500279e-09
+      },
+      {
+        "from_id": "o4",
+        "to_id": "vest_missing",
+        "relation": "vest_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o4",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o5",
+        "to_id": "helmet_missing",
+        "relation": "helmet_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o5",
+        "to_id": "vest_missing",
+        "relation": "vest_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o5",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o6",
+        "to_id": "helmet_missing",
+        "relation": "helmet_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o6",
+        "to_id": "vest_missing",
+        "relation": "vest_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o6",
+        "to_id": "mask_missing",
+        "relation": "mask_overlap_score",
+        "value": 0.0,
+        "prob": 1.0
+      },
+      {
+        "from_id": "o1",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 3.7498016580353286e-13,
+        "prob": 3.7498016580353286e-13
+      },
+      {
+        "from_id": "o2",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 6.157187577214496e-10,
+        "prob": 6.157187577214496e-10
+      },
+      {
+        "from_id": "o3",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 7.304587530906554e-11,
+        "prob": 7.304587530906554e-11
+      },
+      {
+        "from_id": "o4",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 0.0,
+        "prob": 0.0
+      },
+      {
+        "from_id": "o5",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 0.22761578261852264,
+        "prob": 0.22761578261852264
+      },
+      {
+        "from_id": "o6",
+        "to_id": "context_height_no_helmet",
+        "relation": "combined_risk",
+        "value": 0.019695489094596928,
+        "prob": 0.019695489094596928
+      }
+    ],
+    "risk_factors": [
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.0007481689423198243,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=1.00",
+          "floor_distance_px=0.2",
+          "floor_score=0.00",
+          "risk_probability=0.00",
+          "person_conf_used=1.00"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.07950445552720312,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.97",
+          "floor_distance_px=20.6",
+          "floor_score=0.08",
+          "risk_probability=0.08",
+          "person_conf_used=0.97"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.017747563676428206,
+        "evidence": [
+          "object_id=o3",
+          "person_conf=0.95",
+          "floor_distance_px=4.7",
+          "floor_score=0.02",
+          "risk_probability=0.02",
+          "person_conf_used=0.95"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.0,
+        "evidence": [
+          "object_id=o4",
+          "person_conf=0.93",
+          "floor_distance_px=0.0",
+          "floor_score=0.00",
+          "risk_probability=0.00",
+          "person_conf_used=0.93"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": true,
+        "probability": 0.9104631304740906,
+        "evidence": [
+          "object_id=o5",
+          "person_conf=0.91",
+          "floor_distance_px=169.0",
+          "floor_score=1.00",
+          "risk_probability=0.91",
+          "note=height_proxy_used",
+          "person_conf_used=0.91"
+        ]
+      },
+      {
+        "name": "person_at_height_indicator",
+        "triggered": false,
+        "probability": 0.07878195637838771,
+        "evidence": [
+          "object_id=o6",
+          "person_conf=0.90",
+          "floor_distance_px=21.8",
+          "floor_score=0.09",
+          "risk_probability=0.08",
+          "person_conf_used=0.90"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": true,
+        "probability": 0.5878761318071852,
+        "evidence": [
+          "pair=o1-o2",
+          "dist_norm=2.03",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.66",
+          "conf_avg=0.89",
+          "risk_probability=0.59"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": true,
+        "probability": 0.37974616378152043,
+        "evidence": [
+          "pair=o1-o3",
+          "dist_norm=3.41",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.43",
+          "conf_avg=0.88",
+          "risk_probability=0.38"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": true,
+        "probability": 0.7264267545428352,
+        "evidence": [
+          "pair=o1-o4",
+          "dist_norm=1.00",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.83",
+          "conf_avg=0.87",
+          "risk_probability=0.73"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": true,
+        "probability": 0.4999708335684677,
+        "evidence": [
+          "pair=o1-o5",
+          "dist_norm=2.52",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.58",
+          "conf_avg=0.86",
+          "risk_probability=0.50"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": false,
+        "probability": 0.3064056057080688,
+        "evidence": [
+          "pair=o1-o6",
+          "dist_norm=3.86",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.36",
+          "conf_avg=0.86",
+          "risk_probability=0.31"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": false,
+        "probability": 0.2265389496138012,
+        "evidence": [
+          "pair=o2-o3",
+          "dist_norm=4.41",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.26",
+          "conf_avg=0.86",
+          "risk_probability=0.23"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": true,
+        "probability": 0.6153177231405684,
+        "evidence": [
+          "pair=o2-o4",
+          "dist_norm=1.65",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.72",
+          "conf_avg=0.85",
+          "risk_probability=0.62"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": false,
+        "probability": 0.030359383087416193,
+        "evidence": [
+          "pair=o2-o6",
+          "dist_norm=5.78",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.04",
+          "conf_avg=0.83",
+          "risk_probability=0.03"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": false,
+        "probability": 0.26219204272006974,
+        "evidence": [
+          "pair=o3-o4",
+          "dist_norm=4.13",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.31",
+          "conf_avg=0.84",
+          "risk_probability=0.26"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": true,
+        "probability": 0.6630787195135247,
+        "evidence": [
+          "pair=o3-o6",
+          "dist_norm=1.18",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.80",
+          "conf_avg=0.83",
+          "risk_probability=0.66"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": false,
+        "probability": 0.2567738260351936,
+        "evidence": [
+          "pair=o4-o5",
+          "dist_norm=4.12",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.31",
+          "conf_avg=0.82",
+          "risk_probability=0.26"
+        ]
+      },
+      {
+        "name": "person_person_proximity_indicator",
+        "triggered": false,
+        "probability": 0.14126855133572405,
+        "evidence": [
+          "pair=o4-o6",
+          "dist_norm=4.96",
+          "near_thresh_norm=6.00",
+          "proximity_score=0.17",
+          "conf_avg=0.82",
+          "risk_probability=0.14"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": false,
+        "probability": 5.011971823380471e-10,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.91",
+          "best_helmet_overlap=1.00",
+          "best_helmet_conf=0.91",
+          "missing_score=0.00",
+          "risk_probability=0.00",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.91",
+          "best_vest_overlap=0.00",
+          "best_vest_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o1",
+          "person_conf=0.91",
+          "best_mask_overlap=0.00",
+          "best_mask_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": false,
+        "probability": 7.744456001095137e-09,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.87",
+          "best_helmet_overlap=1.00",
+          "best_helmet_conf=0.81",
+          "missing_score=0.00",
+          "risk_probability=0.00",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.87",
+          "best_vest_overlap=0.00",
+          "best_vest_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o2",
+          "person_conf=0.87",
+          "best_mask_overlap=0.00",
+          "best_mask_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": false,
+        "probability": 4.115825509395576e-09,
+        "evidence": [
+          "object_id=o3",
+          "person_conf=0.85",
+          "best_helmet_overlap=1.00",
+          "best_helmet_conf=0.86",
+          "missing_score=0.00",
+          "risk_probability=0.00",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": false,
+        "probability": 0.08015402771616635,
+        "evidence": [
+          "object_id=o3",
+          "person_conf=0.85",
+          "best_vest_overlap=0.58",
+          "best_vest_conf=0.84",
+          "missing_score=0.16",
+          "risk_probability=0.08",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o3",
+          "person_conf=0.85",
+          "best_mask_overlap=0.00",
+          "best_mask_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": false,
+        "probability": 1.2816239750788557e-09,
+        "evidence": [
+          "object_id=o4",
+          "person_conf=0.83",
+          "best_helmet_overlap=1.00",
+          "best_helmet_conf=0.90",
+          "missing_score=0.00",
+          "risk_probability=0.00",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o4",
+          "person_conf=0.83",
+          "best_vest_overlap=0.00",
+          "best_vest_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o4",
+          "person_conf=0.83",
+          "best_mask_overlap=0.00",
+          "best_mask_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o5",
+          "person_conf=0.81",
+          "best_helmet_overlap=0.00",
+          "best_helmet_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o5",
+          "person_conf=0.81",
+          "best_vest_overlap=0.00",
+          "best_vest_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o5",
+          "person_conf=0.81",
+          "best_mask_overlap=0.00",
+          "best_mask_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_helmet_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o6",
+          "person_conf=0.80",
+          "best_helmet_overlap=0.00",
+          "best_helmet_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_vest_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o6",
+          "person_conf=0.80",
+          "best_vest_overlap=0.00",
+          "best_vest_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_no_mask_indicator",
+        "triggered": true,
+        "probability": 0.25,
+        "evidence": [
+          "object_id=o6",
+          "person_conf=0.80",
+          "best_mask_overlap=0.00",
+          "best_mask_conf=0.00",
+          "missing_score=1.00",
+          "risk_probability=0.25",
+          "note=PPE uses PPE evidence + person_conf"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 3.7498016580353286e-13,
+        "evidence": [
+          "object_id=o1",
+          "p_height=0.001",
+          "p_no_helmet=0.000",
+          "combined_probability=0.000"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 6.157187577214496e-10,
+        "evidence": [
+          "object_id=o2",
+          "p_height=0.080",
+          "p_no_helmet=0.000",
+          "combined_probability=0.000"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 7.304587530906554e-11,
+        "evidence": [
+          "object_id=o3",
+          "p_height=0.018",
+          "p_no_helmet=0.000",
+          "combined_probability=0.000"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 0.0,
+        "evidence": [
+          "object_id=o4",
+          "p_height=0.000",
+          "p_no_helmet=0.000",
+          "combined_probability=0.000"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 0.22761578261852264,
+        "evidence": [
+          "object_id=o5",
+          "p_height=0.910",
+          "p_no_helmet=0.250",
+          "combined_probability=0.228"
+        ]
+      },
+      {
+        "name": "person_height_no_helmet_indicator",
+        "triggered": false,
+        "probability": 0.019695489094596928,
+        "evidence": [
+          "object_id=o6",
+          "p_height=0.079",
+          "p_no_helmet=0.250",
+          "combined_probability=0.020"
+        ]
+      }
+    ]
+  },
+  "math_transparency": {
+    "method": "Max-Per-Person",
+    "scene_floor_y": 320.0,
+    "floor_reliable": true,
+    "per_person_scores": {
+      "o1": 0.986,
+      "o2": 0.937,
+      "o3": 0.918,
+      "o4": 0.972,
+      "o5": 0.989,
+      "o6": 0.922
+    },
+    "scene_score": 0.989
+  },
+  "llm_explanation": {
+    "risk_level": "HIGH",
+    "confidence": 0.989,
+    "factors": [
+      "person_at_height_indicator (p=0.91) for object_id=o5, person_conf=0.91",
+      "person_person_proximity_indicator (p=0.73) for pair=o1-o4, dist_norm=1.00",
+      "person_person_proximity_indicator (p=0.66) for pair=o3-o6, dist_norm=1.18"
+    ],
+    "justification": "Based on the provided evidence, the risk level is HIGH due to the high confidence score and the presence of top factors such as person_at_height_indicator and person_person_proximity_indicators."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "risk_level": "LOW",
+  "confidence": 0.0,
+  "ppe_compliance": {
+    "helmet": null,
+    "mask": null,
+    "vest": null,
+    "score": null,
+    "note": "No valid person detected (PERSON_MIN_CONF_RAW=0.35)"
+  },
+  "ppe_per_person": [],
+  "factors": [],
+  "risk_graph": {
+    "objects": [
+      {
+        "id": "o1",
+        "type": "safety_cone",
+        "confidence": 0.8586171269416809,
+        "bbox": [
+          134.5972900390625,
+          122.98031616210938,
+          264.1169128417969,
+          261.61187744140625
+        ]
+      }
+    ],
+    "relations": [],
+    "risk_factors": []
+  },
+  "math_transparency": {
+    "method": "Max-Per-Person",
+    "scene_floor_y": 320.0,
+    "floor_reliable": false,
+    "per_person_scores": {},
+    "scene_score": 0.0
+  },
+  "llm_explanation": {
+    "risk_level": "LOW",
+    "confidence": 0.0,
+    "factors": [],
+    "justification": ""
+  }
+}
